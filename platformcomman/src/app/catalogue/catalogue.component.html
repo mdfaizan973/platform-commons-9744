@@ -34,62 +34,6 @@
               viewBox="0 0 16 16"
             ></svg>
 
-            <!-- <div *ngIf="showAddToCartButton; else quantityControl">
-              <button
-                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                (click)="addToCart($event, product.id)"
-              >
-                Add to Cart
-              </button>
-            </div>
-
-            <ng-template #quantityControl>
-              <button
-                class="bg-blue-500 text-white font-bold py-2 px-4 rounded"
-                (click)="decrementQuantity($event, product.id)"
-              >
-                (-)
-              </button>
-
-              <span>{{ existingCartItemQuantity }}</span>
-
-              <button
-                class="bg-blue-500 text-white font-bold py-2 px-4 rounded"
-                (click)="addToCart($event, product.id)"
-              >
-                ( + )
-              </button>
-            </ng-template> -->
-            <!-- <div class="ml-auto">
-              <ng-container
-                *ngIf="!isProductInCart(product.id); else quantityControl"
-              >
-                <button
-                  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                  (click)="addToCart($event, product.id)"
-                >
-                  Add to Cart
-                </button>
-              </ng-container>
-            </div>
-
-            <ng-template #quantityControl>
-              <div class="flex items-center">
-                <button
-                  class="bg-blue-500 text-white font-bold py-2 px-4 rounded"
-                  (click)="decrementQuantity($event, product.id)"
-                >
-                  (-)
-                </button>
-                <span>{{ getCartItemQuantity(product.id) }}</span>
-                <button
-                  class="bg-blue-500 text-white font-bold py-2 px-4 rounded"
-                  (click)="addToCart($event, product.id)"
-                >
-                  ( + )
-                </button>
-              </div>
-            </ng-template> -->
             <div class="ml-auto">
               <ng-container
                 *ngIf="
