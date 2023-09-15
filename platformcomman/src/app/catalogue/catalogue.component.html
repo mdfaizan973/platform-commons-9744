@@ -13,7 +13,9 @@
         class="h-60 w-72 object-cover rounded-t-xl"
       />
       <div class="px-4 py-3 w-72">
-        <span class="text-gray-400 mr-3 uppercase text-xs">Brand</span>
+        <span class="text-gray-400 mr-3 uppercase text-xs">
+          {{ product.Brand }}</span
+        >
         <p class="text-lg font-bold text-black truncate block capitalize">
           {{ product.Name }}
         </p>
@@ -23,7 +25,7 @@
           </p>
           <del>
             <p class="text-sm text-gray-600 cursor-auto ml-2">
-              ${{ product.RegularPrice }}
+              ${{ product.Price }}
             </p>
           </del>
           <div class="ml-auto">
