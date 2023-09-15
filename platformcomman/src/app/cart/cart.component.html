@@ -6,7 +6,7 @@
     <div class="rounded-lg md:w-2/3">
       <!-- --show data -->
       <div
-        *ngFor="let item of cartItems"
+        *ngFor="let item of cartItems; let i = index"
         class="justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start"
       >
         <img
@@ -40,27 +40,27 @@
             </div>
             <div class="flex items-center space-x-4">
               <p class="text-sm">{{ item.Price }} ₹</p>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="h-5 w-5 cursor-pointer duration-150 hover:text-red-500"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
+              <button (click)="removeFromLocalStorage(i)">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="h-5 w-5 cursor-pointer duration-150 hover:text-red-500"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
             </div>
           </div>
         </div>
       </div>
-      <!-- --show data -->
     </div>
-    <!-- Sub total -->
     <div
       class="mt-6 h-full rounded-lg border bg-white p-6 shadow-md md:mt-0 md:w-1/3"
     >
