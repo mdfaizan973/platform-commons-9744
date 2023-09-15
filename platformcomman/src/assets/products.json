@@ -1,162 +1,202 @@
 [
     {
+        "id": 1,
         "Name": "Elegant Silk Dress",
         "Brand": "Elegant Attire",
         "Description": "A sophisticated silk dress for special occasions.",
         "Image": "https://i.pinimg.com/564x/c9/f7/e1/c9f7e1ecb9aa11a3c042e41c932f5c9e.jpg",
         "Weight": "250g",
+        "Quantity": 1,
         "Price": 99.99
     },
     {
+        "id": 2,
         "Name": "Casual Linen Shirt",
         "Brand": "Linen Styles",
         "Description": "A comfortable linen shirt for everyday wear.",
         "Image": "https://i.pinimg.com/736x/12/84/d4/1284d40769e91ceb0951bf5be4acdaa8.jpg",
         "Weight": "250g",
+        "Quantity": 1,
         "Price": 69.99
     },
     {
+        "id": 3,
         "Name": "Premium Woolen Suit",
         "Brand": "Luxury Styles",
         "Description": "A high-quality woolen suit for the modern gentleman.",
         "Image": "https://i.pinimg.com/564x/7b/52/2d/7b522d23626970ecd00b88f8aafc9521.jpg",
         "Weight": "500g",
+        "Quantity": 1,
         "Price": 149.99
     },
     {
+        "id": 4,
         "Name": "Luxury Velvet Gown",
         "Brand": "Glamour Boutique",
         "Description": "An opulent velvet gown for a glamorous evening.",
         "Image": "https://i.pinimg.com/564x/57/f7/0a/57f70a867aeab88b660a6050a7e7eb11.jpg",
         "Weight": "1kg",
+        "Quantity": 1,
         "Price": 199.99
     },
     {
+        "id": 5,
         "Name": "Chic Linen Blouse",
         "Brand": "Casual Elegance",
         "Description": "A stylish linen blouse for casual elegance.",
         "Image": "https://i.pinimg.com/564x/14/eb/78/14eb780f71b3322ac011aed50384818a.jpg",
         "Weight": "250g",
+        "Quantity": 1,
         "Price": 79.99
     },
     {
+        "id": 6,
         "Name": "Classic Tuxedo",
         "Brand": "Tuxedo Styles",
         "Description": "A classic tuxedo for timeless sophistication.",
         "Image": "https://i.pinimg.com/564x/8b/86/3a/8b863a3bae07fd02ad5829c57c561dca.jpg",
         "Weight": "500g",
+        "Quantity": 1,
         "Price": 159.99
     },
     {
+        "id": 7,
         "Name": "Silk Evening Gown",
         "Brand": "Evening Elegance",
         "Description": "A stunning silk evening gown for memorable events.",
         "Image": "https://i.pinimg.com/564x/72/a2/05/72a20504bc9df3b47ac50a4a334e5f9b.jpg",
         "Weight": "1kg",
+        "Quantity": 1,
         "Price": 219.99
     },
     {
+        "id": 8,
         "Name": "Casual Linen Shirt",
         "Brand": "Linen Styles",
         "Description": "A comfortable linen shirt for everyday wear.",
         "Image": "https://i.pinimg.com/736x/12/84/d4/1284d40769e91ceb0951bf5be4acdaa8.jpg",
         "Weight": "250g",
+        "Quantity": 1,
         "Price": 69.99
     },
     {
+        "id": 9,
         "Name": "Tailored Wool Blazer",
         "Brand": "Woolen Couture",
         "Description": "A tailored wool blazer for a polished look.",
         "Image": "https://i.pinimg.com/564x/e8/11/e6/e811e66e999aefd6b42a5db7a325b247.jpg",
         "Weight": "500g",
+        "Quantity": 1,
         "Price": 139.99
     },
     {
+        "id": 10,
         "Name": "Elegant Silk Kimono",
         "Brand": "Silk Creations",
         "Description": "An elegant silk kimono for a touch of luxury.",
         "Image": "https://i.pinimg.com/564x/46/04/20/4604209e40b99aea3b2c9beed4f30bf9.jpg",
         "Weight": "1kg",
+        "Quantity": 1,
         "Price": 199.99
     },
     {
+        "id": 11,
         "Name": "Sleek Linen Dress",
         "Brand": "Linen Elegance",
         "Description": "A sleek linen dress for a minimalist style.",
         "Image": "https://i.pinimg.com/564x/2d/4f/e8/2d4fe85d3967452981423bed23d8183b.jpg",
         "Weight": "250g",
+        "Quantity": 1,
         "Price": 89.99
     },
     {
+        "id": 12,
         "Name": "Designer Evening Suit",
         "Brand": "Designer Couture",
         "Description": "A designer evening suit for a red-carpet look.",
         "Image": "https://i.pinimg.com/564x/88/60/f2/8860f28426d80db0af9ede6ee1b177a7.jpg",
         "Weight": "500g",
+        "Quantity": 1,
         "Price": 169.99
     },
     {
+        "id": 13,
         "Name": "Vintage Velvet Blouse",
         "Brand": "Vintage Styles",
         "Description": "A vintage velvet blouse for a touch of nostalgia.",
         "Image": "https://i.pinimg.com/564x/00/cd/c6/00cdc6bf942adb3ca483ba0eec09f6e3.jpg",
         "Weight": "1kg",
+        "Quantity": 1,
         "Price": 209.99
     },
     {
+        "id": 14,
         "Name": "Stylish Denim Jacket",
         "Brand": "Denim Trends",
         "Description": "A stylish denim jacket for a cool and casual look.",
         "Image": "https://i.pinimg.com/564x/ce/e7/cd/cee7cd6b6bc5e8970d751a13de424422.jpg",
         "Weight": "500g",
+        "Quantity": 1,
         "Price": 119.99
     },
     {
+        "id": 15,
         "Name": "Casual Cotton T-shirt",
         "Brand": "Cotton Comfort",
         "Description": "A comfortable cotton t-shirt for everyday wear.",
         "Image": "https://i.pinimg.com/564x/04/64/23/0464239be97cdcdfbcc8cd0a1794ee46.jpg",
         "Weight": "250g",
+        "Quantity": 1,
         "Price": 49.99
     },
     {
+        "id": 16,
         "Name": "Chic Leather Bag",
         "Brand": "Leather Luxe",
         "Description": "A chic leather bag to complement your style.",
         "Image": "https://i.pinimg.com/736x/7b/63/df/7b63df6a32b69e0e3354e6a945c8e473.jpg",
         "Weight": "750g",
+        "Quantity": 1,
         "Price": 179.99
     },
     {
+        "id": 17,
         "Name": "Sporty Sneakers",
         "Brand": "Active Gear",
         "Description": "Sporty sneakers for your active lifestyle.",
         "Image": "https://i.pinimg.com/564x/3c/0e/af/3c0eaf9a125e949eed95d907e996e4e5.jpg",
         "Weight": "500g",
+        "Quantity": 1,
         "Price": 79.99
     },
     {
+        "id": 18,
         "Name": "Casual Canvas Shoes",
         "Brand": "Canvas Comfort",
         "Description": "Comfortable canvas shoes for everyday adventures.",
         "Image": "https://i.pinimg.com/564x/fc/ef/2f/fcef2fce1470eca5d677791e7d448772.jpg",
         "Weight": "400g",
+        "Quantity": 1,
         "Price": 59.99
     },
     {
+        "id": 19,
         "Name": "Classic Leather Jacket",
         "Brand": "Leather Classics",
         "Description": "A classic leather jacket for timeless style.",
         "Image": "https://i.pinimg.com/564x/8a/43/c3/8a43c31e57266c3d13bfb144d5923bcd.jpg",
         "Weight": "800g",
+        "Quantity": 1,
         "Price": 199.99
     },
     {
+        "id": 20,
         "Name": "Chic Summer Dress",
         "Brand": "Summer Styles",
         "Description": "A chic summer dress for sunny days.",
         "Image": "https://i.pinimg.com/564x/72/f0/fd/72f0fdd243fd78ac604090ac5535af8b.jpg",
         "Weight": "300g",
+        "Quantity": 1,
         "Price": 69.99
     }
 ]

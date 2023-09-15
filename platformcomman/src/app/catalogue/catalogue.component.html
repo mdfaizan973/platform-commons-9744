@@ -37,11 +37,32 @@
               class="bi bi-bag-plus"
               viewBox="0 0 16 16"
             ></svg>
-            <button
-              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            >
-              Add to Cart
-            </button>
+
+            <div *ngIf="showAddToCartButton; else quantityControl">
+              <button
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                (click)="addToCart($event)"
+              >
+                Add to Cart
+              </button>
+            </div>
+
+            <ng-template #quantityControl>
+              <button
+                class="bg-blue-500 text-white font-bold py-2 px-4 rounded"
+                (click)="decrementQuantity($event)"
+              >
+                (-)
+              </button>
+              <span>{{ quantity }}</span>
+
+              <button
+                class="bg-blue-500 text-white font-bold py-2 px-4 rounded"
+                (click)="incrementQuantity($event)"
+              >
+                ( + )
+              </button>
+            </ng-template>
           </div>
         </div>
       </div>
