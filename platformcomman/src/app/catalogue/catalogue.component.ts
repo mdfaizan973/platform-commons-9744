@@ -11,62 +11,45 @@ export class CatalogueComponent implements OnInit {
   products: any;
   showAddToCartButton = true;
   quantity = 1;
+  existingCartItemQuantity: number = 1;
 
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
     this.http.get('../assets/products.json').subscribe((data) => {
       this.products = data;
-      console.log('Products:', this.products);
+      // console.log('Products:', this.products);
     });
+    // ---
   }
-
-  // addToCart(event: Event, id: Number) {
-  //   this.showAddToCartButton = false;
-  //   event.preventDefault();
-  //   console.log('Added to cart', id);
-  // }
 
   // ----
   addToCart(event: Event, id: number) {
     event.preventDefault();
     // console.log('Added to cart', id);
-
     const existingCartItems = JSON.parse(
       localStorage.getItem('cartItems') || '[]'
     );
-
     const productToAdd = this.products.find((item: any) => item.id === id);
-
     if (productToAdd) {
       const existingCartItem = existingCartItems.find(
         (item: any) => item.id === id
       );
-
       if (existingCartItem) {
         existingCartItem.Quantity++;
+        console.log('existingCartItem.Quantity', existingCartItem.Quantity);
+        this.existingCartItemQuantity = existingCartItem.Quantity; // Store the quantity
+        // localStorage.setItem('cartItems', JSON.stringify(existingCartItems));
       } else {
         existingCartItems.push({ ...productToAdd, Quantity: 1 });
       }
-
       localStorage.setItem('cartItems', JSON.stringify(existingCartItems));
-
       this.showAddToCartButton = false;
     }
   }
-
   // ----
-  decrementQuantity(event: Event, index: number) {
+  decrementQuantity(event: Event, id: number) {
     event.preventDefault();
-    if (this.products[index]) {
-      this.products[index].Quantity--;
-    }
-  }
-
-  incrementQuantity(event: Event, index: number) {
-    event.preventDefault();
-    if (this.products[index]) {
-      this.products[index].Quantity++;
-    }
+    console.log(id);
   }
 }
