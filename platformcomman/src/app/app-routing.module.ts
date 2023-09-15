@@ -11,10 +11,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CatalogueComponent } from './catalogue/catalogue.component';
+import { CheackoutComponent } from './cheackout/cheackout.component';
 import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   { path: 'catalogue', component: CatalogueComponent },
+  { path: 'cheackout', component: CheackoutComponent },
   { path: 'cart', component: CartComponent },
   { path: '', redirectTo: '/catalogue', pathMatch: 'full' }, // Default route
 ];

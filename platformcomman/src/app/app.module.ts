@@ -5,9 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CatalogueComponent } from './catalogue/catalogue.component';
 import { CartComponent } from './cart/cart.component';
+import { CheackoutComponent } from './cheackout/cheackout.component';
 
 @NgModule({
-  declarations: [AppComponent, CatalogueComponent, CartComponent],
+  declarations: [AppComponent, CatalogueComponent, CartComponent, CheackoutComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
