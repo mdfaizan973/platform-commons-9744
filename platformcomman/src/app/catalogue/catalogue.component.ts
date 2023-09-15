@@ -11,6 +11,7 @@ export class CatalogueComponent implements OnInit {
   products: any;
   quantity = 1;
   existingCartItemQuantity: number = 1;
+  showAddToCartButton = true;
 
   constructor(private http: HttpClient) {}
 
@@ -19,11 +20,25 @@ export class CatalogueComponent implements OnInit {
       this.products = data;
       // console.log('Products:', this.products);
     });
-    // ---
   }
 
   // ----
-  showAddToCartButton = true;
+  isProductInCart(productId: number): boolean {
+    const existingCartItems = JSON.parse(
+      localStorage.getItem('cartItems') || '[]'
+    );
+    return existingCartItems.some((item: any) => item.id === productId);
+  }
+
+  getCartItemQuantity(productId: number): number {
+    const existingCartItems = JSON.parse(
+      localStorage.getItem('cartItems') || '[]'
+    );
+    const cartItem = existingCartItems.find(
+      (item: any) => item.id === productId
+    );
+    return cartItem ? cartItem.Quantity : 0;
+  }
 
   addToCart(event: Event, id: number) {
     event.preventDefault();
