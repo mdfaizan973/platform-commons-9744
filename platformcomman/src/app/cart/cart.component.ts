@@ -13,7 +13,7 @@ export class CartComponent implements OnInit {
 
     if (cartItemsData) {
       this.cartItems = JSON.parse(cartItemsData);
-      console.log('Cart Items:', this.cartItems);
+      // console.log('Cart Items:', this.cartItems);
     } else {
       this.cartItems = [];
     }
