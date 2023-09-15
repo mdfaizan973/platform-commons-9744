@@ -21,23 +21,55 @@ export class CatalogueComponent implements OnInit {
     });
   }
 
-  addToCart(event: Event) {
-    event.preventDefault();
-    console.log('Added to cart. Product ID:');
-    this.showAddToCartButton = false;
-  }
+  // addToCart(event: Event, id: Number) {
+  //   this.showAddToCartButton = false;
+  //   event.preventDefault();
+  //   console.log('Added to cart', id);
+  // }
 
-  decrementQuantity(event: Event) {
+  // ----
+  addToCart(event: Event, id: number) {
     event.preventDefault();
+    console.log('Added to cart', id);
 
-    if (this.quantity > 1) {
-      this.quantity--;
+    // Get the existing cart items from local storage (if any)
+    const existingCartItems = JSON.parse(
+      localStorage.getItem('cartItems') || '[]'
+    );
+
+    // Find the product by ID in your products array
+    const productToAdd = this.products.find((item: any) => item.id === id);
+
+    if (productToAdd) {
+      // Check if the product is already in the cart
+      const existingCartItem = existingCartItems.find(
+        (item: any) => item.id === id
+      );
+
+      if (existingCartItem) {
+        existingCartItem.Quantity++;
+      } else {
+        existingCartItems.push({ ...productToAdd, Quantity: 1 });
+      }
+
+      localStorage.setItem('cartItems', JSON.stringify(existingCartItems));
+
+      this.showAddToCartButton = false;
     }
   }
 
-  incrementQuantity(event: Event) {
+  // ----
+  decrementQuantity(event: Event, index: number) {
     event.preventDefault();
+    if (this.products[index]) {
+      this.products[index].Quantity--;
+    }
+  }
 
-    this.quantity++;
+  incrementQuantity(event: Event, index: number) {
+    event.preventDefault();
+    if (this.products[index]) {
+      this.products[index].Quantity++;
+    }
   }
 }

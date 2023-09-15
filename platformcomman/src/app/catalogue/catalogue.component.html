@@ -3,7 +3,7 @@
   class="w-fit mx-auto grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5"
 >
   <div
-    *ngFor="let product of products"
+    *ngFor="let product of products; let i = index"
     class="bg-white w-72 shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl"
   >
     <a href="#">
@@ -41,7 +41,7 @@
             <div *ngIf="showAddToCartButton; else quantityControl">
               <button
                 class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                (click)="addToCart($event)"
+                (click)="addToCart($event, product.id)"
               >
                 Add to Cart
               </button>
@@ -50,15 +50,16 @@
             <ng-template #quantityControl>
               <button
                 class="bg-blue-500 text-white font-bold py-2 px-4 rounded"
-                (click)="decrementQuantity($event)"
+                (click)="decrementQuantity($event, i)"
               >
                 (-)
               </button>
+
               <span>{{ quantity }}</span>
 
               <button
                 class="bg-blue-500 text-white font-bold py-2 px-4 rounded"
-                (click)="incrementQuantity($event)"
+                (click)="incrementQuantity($event, i)"
               >
                 ( + )
               </button>
