@@ -12,7 +12,7 @@ export class CatalogueComponent implements OnInit {
   quantity = 1;
   existingCartItemQuantity: number = 1;
   showAddToCartButton = true;
-
+  showAlert: boolean = false;
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
@@ -43,6 +43,34 @@ export class CatalogueComponent implements OnInit {
   addToCart(event: Event, id: number) {
     event.preventDefault();
     // console.log('Added to cart', id);
+    this.showAlert = true;
+    const existingCartItems = JSON.parse(
+      localStorage.getItem('cartItems') || '[]'
+    );
+    const productToAdd = this.products.find((item: any) => item.id === id);
+    if (productToAdd) {
+      const existingCartItem = existingCartItems.find(
+        (item: any) => item.id === id
+      );
+      if (existingCartItem) {
+        existingCartItem.Quantity++;
+        console.log('existingCartItem.Quantity', existingCartItem.Quantity);
+        this.existingCartItemQuantity = existingCartItem.Quantity;
+      } else {
+        existingCartItems.push({ ...productToAdd, Quantity: 1 });
+      }
+      localStorage.setItem('cartItems', JSON.stringify(existingCartItems));
+      this.showAddToCartButton = false;
+    }
+    setTimeout(() => {
+      this.showAlert = false;
+    }, 2200);
+  }
+  // ----
+  increment(event: Event, id: number) {
+    event.preventDefault();
+    // console.log('Added to cart', id);
+    // this.showAlert = true;
     const existingCartItems = JSON.parse(
       localStorage.getItem('cartItems') || '[]'
     );
@@ -62,31 +90,8 @@ export class CatalogueComponent implements OnInit {
       this.showAddToCartButton = false;
     }
   }
-
   // ----
-  // decrementQuantity(event: Event, id: number) {
-  //   event.preventDefault();
-  //   // console.log('Added to cart', id);
-  //   const existingCartItems = JSON.parse(
-  //     localStorage.getItem('cartItems') || '[]'
-  //   );
-  //   const productToAdd = this.products.find((item: any) => item.id === id);
-  //   if (productToAdd) {
-  //     const existingCartItem = existingCartItems.find(
-  //       (item: any) => item.id === id
-  //     );
-  //     if (existingCartItem) {
-  //       existingCartItem.Quantity--;
-  //       console.log('existingCartItem.Quantity', existingCartItem.Quantity);
-  //       this.existingCartItemQuantity = existingCartItem.Quantity;
-  //       console.log(existingCartItem.Quantity); // Counting quantity
-  //     } else {
-  //       existingCartItems.push({ ...productToAdd, Quantity: 1 });
-  //     }
-  //     localStorage.setItem('cartItems', JSON.stringify(existingCartItems));
-  //     this.showAddToCartButton = false;
-  //   }
-  // }
+
   decrementQuantity(event: Event, id: number) {
     event.preventDefault();
     const existingCartItems = JSON.parse(

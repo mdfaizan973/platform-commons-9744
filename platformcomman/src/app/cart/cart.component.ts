@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartComponent implements OnInit {
   cartItems: any[] = JSON.parse(localStorage.getItem('cartItems') || '[]');
+  showAlert: boolean = false;
 
   ngOnInit() {
     const cartItemsData = localStorage.getItem('cartItems');
@@ -33,9 +34,13 @@ export class CartComponent implements OnInit {
     return onlySiglePrice;
   }
   removeFromLocalStorage(index: number) {
+    this.showAlert = true;
     if (index >= 0 && index < this.cartItems.length) {
       this.cartItems.splice(index, 1);
       localStorage.setItem('cartItems', JSON.stringify(this.cartItems));
     }
+    setTimeout(() => {
+      this.showAlert = false;
+    }, 2200);
   }
 }

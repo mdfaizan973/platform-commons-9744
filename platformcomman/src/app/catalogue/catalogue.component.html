@@ -1,4 +1,27 @@
 <div
+  *ngIf="showAlert"
+  class="w-1/4 bg-green-100 border-t-4 border-green-500 rounded-b text-blue-900 px-4 py-3 shadow-md z-10 fixed top-15 left-0 right-0"
+  role="alert"
+>
+  <div class="flex">
+    <div class="py-1">
+      <svg
+        class="fill-current h-6 w-6 text-green-500 mr-4"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+      >
+        <path
+          d="M2.293 9.293a1 1 0 0 1 0-1.414l4-4a1 1 0 0 1 1.414 0L10 7.586l2.293-2.293a1 1 0 0 1 1.414 0l4 4a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-8-8a1 1 0 0 1 0-1.414z"
+        />
+      </svg>
+    </div>
+    <div>
+      <p class="font-bold">Product Added To Cart</p>
+    </div>
+  </div>
+</div>
+
+<div
   *ngIf="products"
   class="w-fit mx-auto grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5"
 >
@@ -61,7 +84,7 @@
                 <span>{{ getCartItemQuantity(product.id) }}</span>
                 <button
                   class="bg-blue-500 text-white font-bold py-2 px-4 rounded"
-                  (click)="addToCart($event, product.id)"
+                  (click)="increment($event, product.id)"
                 >
                   ( + )
                 </button>

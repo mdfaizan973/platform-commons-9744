@@ -1,3 +1,25 @@
+<div
+  *ngIf="showAlert"
+  class="w-1/4 bg-red-100 border-t-4 border-red-500 rounded-b text-blue-900 px-4 py-3 shadow-md z-10 fixed top-15 left-0 right-0"
+  role="alert"
+>
+  <div class="flex">
+    <div class="py-1">
+      <svg
+        class="fill-current h-6 w-6 text-red-500 mr-4"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+      >
+        <path
+          d="M2.293 9.293a1 1 0 0 1 0-1.414l4-4a1 1 0 0 1 1.414 0L10 7.586l2.293-2.293a1 1 0 0 1 1.414 0l4 4a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-8-8a1 1 0 0 1 0-1.414z"
+        />
+      </svg>
+    </div>
+    <div>
+      <p class="font-bold">Product Deleted From Cart</p>
+    </div>
+  </div>
+</div>
 <div class="" *ngIf="cartItems && cartItems.length > 0; else emptyCartMessage">
   <h1 class="mt-2 mb-8 text-center text-3xl text-gray-600 font-bold">
     CART ITEMS
