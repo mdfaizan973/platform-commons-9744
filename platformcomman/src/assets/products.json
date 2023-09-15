@@ -1,0 +1,86 @@
+[
+    {
+        "Name": "Elegant Silk Dress",
+        "Description": "A sophisticated silk dress for special occasions.",
+        "Image": "https://i.pinimg.com/564x/c9/f7/e1/c9f7e1ecb9aa11a3c042e41c932f5c9e.jpg",
+        "Weight": "250g",
+        "Price": 99.99
+    },
+    {
+        "Name": "Premium Woolen Suit",
+        "Description": "A high-quality woolen suit for the modern gentleman.",
+        "Image": "https://i.pinimg.com/736x/21/aa/bf/21aabf1f56f2dcf60e3204b4cf11fc62.jpg",
+        "Weight": "500g",
+        "Price": 149.99
+    },
+    {
+        "Name": "Luxury Velvet Gown",
+        "Description": "An opulent velvet gown for a glamorous evening.",
+        "Image": "https://i.pinimg.com/564x/57/f7/0a/57f70a867aeab88b660a6050a7e7eb11.jpg",
+        "Weight": "1kg",
+        "Price": 199.99
+    },
+    {
+        "Name": "Chic Linen Blouse",
+        "Description": "A stylish linen blouse for casual elegance.",
+        "Image": "https://i.pinimg.com/564x/14/eb/78/14eb780f71b3322ac011aed50384818a.jpg",
+        "Weight": "250g",
+        "Price": 79.99
+    },
+    {
+        "Name": "Classic Tuxedo",
+        "Description": "A classic tuxedo for timeless sophistication.",
+        "Image": "https://i.pinimg.com/564x/e0/76/a8/e076a8b1d274f86ad5802e99e4deeec9.jpg",
+        "Weight": "500g",
+        "Price": 159.99
+    },
+    {
+        "Name": "Silk Evening Gown",
+        "Description": "A stunning silk evening gown for memorable events.",
+        "Image": "https://i.pinimg.com/564x/72/a2/05/72a20504bc9df3b47ac50a4a334e5f9b.jpg",
+        "Weight": "1kg",
+        "Price": 219.99
+    },
+    {
+        "Name": "Casual Linen Shirt",
+        "Description": "A comfortable linen shirt for everyday wear.",
+        "Image": "https://i.pinimg.com/736x/12/84/d4/1284d40769e91ceb0951bf5be4acdaa8.jpg",
+        "Weight": "250g",
+        "Price": 69.99
+    },
+    {
+        "Name": "Tailored Wool Blazer",
+        "Description": "A tailored wool blazer for a polished look.",
+        "Image": "https://i.pinimg.com/564x/e8/11/e6/e811e66e999aefd6b42a5db7a325b247.jpg",
+        "Weight": "500g",
+        "Price": 139.99
+    },
+    {
+        "Name": "Elegant Silk Kimono",
+        "Description": "An elegant silk kimono for a touch of luxury.",
+        "Image": "https://i.pinimg.com/564x/46/04/20/4604209e40b99aea3b2c9beed4f30bf9.jpg",
+        "Weight": "1kg",
+        "Price": 199.99
+    },
+    {
+        "Name": "Sleek Linen Dress",
+        "Description": "A sleek linen dress for a minimalist style.",
+        "Image": "https://i.pinimg.com/564x/2d/4f/e8/2d4fe85d3967452981423bed23d8183b.jpg",
+        "Weight": "250g",
+        "Price": 89.99
+    },
+    {
+        "Name": "Designer Evening Suit",
+        "Description": "A designer evening suit for a red-carpet look.",
+        "Image": "https://i.pinimg.com/564x/88/60/f2/8860f28426d80db0af9ede6ee1b177a7.jpg",
+        "Weight": "500g",
+        "Price": 169.99
+    },
+    {
+        "Name": "Vintage Velvet Blouse",
+        "Description": "A vintage velvet blouse for a touch of nostalgia.",
+        "Image": "https://i.pinimg.com/564x/00/cd/c6/00cdc6bf942adb3ca483ba0eec09f6e3.jpg",
+        "Weight": "1kg",
+        "Price": 209.99
+    }
+]

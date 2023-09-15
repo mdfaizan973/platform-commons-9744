@@ -1,1 +1,48 @@
-<h1 class="text-2xl font-bold underline">Catalog</h1>
+<div
+  *ngIf="products"
+  class="w-fit mx-auto grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5"
+>
+  <div
+    *ngFor="let product of products"
+    class="bg-white w-72 shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl"
+  >
+    <a href="#">
+      <img
+        [src]="product.Image"
+        alt="{{ product.Name }}"
+        class="h-60 w-72 object-cover rounded-t-xl"
+      />
+      <div class="px-4 py-3 w-72">
+        <span class="text-gray-400 mr-3 uppercase text-xs">Brand</span>
+        <p class="text-lg font-bold text-black truncate block capitalize">
+          {{ product.Name }}
+        </p>
+        <div class="flex items-center">
+          <p class="text-lg font-semibold text-black cursor-auto my-3">
+            ${{ product.Price }}
+          </p>
+          <del>
+            <p class="text-sm text-gray-600 cursor-auto ml-2">
+              ${{ product.RegularPrice }}
+            </p>
+          </del>
+          <div class="ml-auto">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="currentColor"
+              class="bi bi-bag-plus"
+              viewBox="0 0 16 16"
+            ></svg>
+            <button
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
