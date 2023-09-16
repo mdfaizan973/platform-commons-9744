@@ -22,14 +22,14 @@ export class CartComponent implements OnInit {
     let totalPrice = 0;
     for (const item of this.cartItems) {
       console.log(item.Price);
-      totalPrice += item.Quantity * item.Price.toFixed(2);
+      totalPrice += item.Quantity * item.Price;
     }
     return totalPrice;
   }
   geSinglePrice(): number {
     let onlySiglePrice = 0;
     for (const item of this.cartItems) {
-      onlySiglePrice += item.Price.toFixed(2);
+      onlySiglePrice += item.Price;
     }
     return onlySiglePrice;
   }

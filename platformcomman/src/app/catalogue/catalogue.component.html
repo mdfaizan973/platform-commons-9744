@@ -37,8 +37,11 @@
       />
       <div class="px-4 py-3 w-72">
         <span class="text-gray-400 mr-3 uppercase text-xs">
-          {{ product.Brand }}</span
-        >
+          {{ product.Brand }}
+        </span>
+        <span class="text-red-400 mr-3 text-xs">
+          {{ product.Weight }}
+        </span>
         <p class="text-lg font-bold text-black truncate block capitalize">
           {{ product.Name }}
         </p>
@@ -79,14 +82,14 @@
                   class="bg-blue-500 text-white font-bold py-2 px-4 rounded"
                   (click)="decrementQuantity($event, product.id)"
                 >
-                  (-)
+                  -
                 </button>
                 <span>{{ getCartItemQuantity(product.id) }}</span>
                 <button
                   class="bg-blue-500 text-white font-bold py-2 px-4 rounded"
                   (click)="increment($event, product.id)"
                 >
-                  ( + )
+                  +
                 </button>
               </div>
             </ng-template>
