@@ -21,17 +21,17 @@ export class CartComponent implements OnInit {
   getTotalPrice(): number {
     let totalPrice = 0;
     for (const item of this.cartItems) {
-      console.log(item.Price);
+      console.log(typeof item.Price);
       totalPrice += item.Quantity * item.Price;
     }
-    return totalPrice;
+    return Number(totalPrice.toFixed(2));
   }
   geSinglePrice(): number {
     let onlySiglePrice = 0;
     for (const item of this.cartItems) {
       onlySiglePrice += item.Price;
     }
-    return onlySiglePrice;
+    return Number(onlySiglePrice.toFixed(2));
   }
   removeFromLocalStorage(index: number) {
     this.showAlert = true;
